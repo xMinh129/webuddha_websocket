@@ -1,0 +1,15 @@
+= Webuddha =
+
+== A websocket based random Buddha quote generator ==
+
+=== Environment ===
+
+`Webuddha` requires Python 3 to run and Pipenv to manage dependencies.
+
+=== Running The Server ===
+
+`Webuddha` can be started with `python websockets.py`.
+
+=== Running The Client ===
+
+Open `websockets.html` with your favorite browser.

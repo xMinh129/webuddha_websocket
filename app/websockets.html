@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Webuddha</title>
+</head>
+
+<body>
+  <div>Buddha says:</div>
+  <script>
+    var ws = new WebSocket("ws://" + 'localhost' + ":9677/"),
+      message = document.createElement('div');
+    document.body.appendChild(message);
+
+    ws.onmessage = (event) => {
+      message.innerHTML = event.data;
+      console.log(event.data);
+    };
+
+    ws.onerror = () => {
+      message.innerHTML = 'We have a problem!'
+    }
+  </script>
+</body>
+
+</html>
